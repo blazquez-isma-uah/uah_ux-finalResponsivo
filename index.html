@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portal de noticias tecnológicas - TechNews">
+    <title>TechNews - Portal de Noticias Tecnológicas</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Cabecera del sitio -->
+    <header class="site-header">
+        <div class="container">
+            <!-- Logo / Home -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="TechNews - Inicio" class="logo-img">
+                </a>
+            </div>
+
+            <!-- Título principal del sitio -->
+            <h1 class="site-title">TechNews</h1>
+
+            <!-- Menú de navegación -->
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="#tecnologia">Tecnología</a></li>
+                    <li><a href="#ciencia">Ciencia</a></li>
+                    <li><a href="#innovacion">Innovación</a></li>
+                    <li><a href="#gadgets">Gadgets</a></li>
+                </ul>
+            </nav>
+
+            <!-- Formulario de búsqueda -->
+            <form class="search-form" role="search">
+                <label for="search-input" class="visually-hidden">Buscar noticias</label>
+                <input 
+                    type="search" 
+                    id="search-input" 
+                    class="search-input" 
+                    placeholder="Buscar noticias..."
+                    aria-label="Campo de búsqueda">
+                <button type="submit" class="search-button" aria-label="Buscar">
+                    <span class="search-icon">🔍</span>
+                </button>
+            </form>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+        <div class="container">
+            
+            <!-- Noticia Principal -->
+            <article class="featured-article">
+                <a href="noticia.html" class="article-link">
+                    <img src="images/noticia-principal.jpg" 
+                         alt="Inteligencia Artificial revoluciona el desarrollo de software" 
+                         class="article-image">
+                    
+                    <div class="article-content">
+                        <h2 class="article-title">
+                            La Inteligencia Artificial revoluciona el desarrollo de software moderno
+                        </h2>
+                        <p class="article-excerpt">
+                            Las nuevas herramientas de IA están transformando la forma en que los desarrolladores 
+                            escriben código. Asistentes inteligentes, generación automática y análisis predictivo 
+                            están mejorando la productividad en un 40% según estudios recientes de la industria 
+                            tecnológica mundial.
+                        </p>
+                        <time class="article-date" datetime="2026-01-28">28 de enero de 2026</time>
+                    </div>
+                </a>
+            </article>
+
+            <!-- Grid de noticias secundarias -->
+            <section class="secondary-articles">
+                <h2 class="section-title visually-hidden">Más noticias</h2>
+                
+                <article class="article-card">
+                    <a href="noticia.html" class="card-link">
+                        <img src="images/noticia-2.jpg" 
+                             alt="Quantum computing avances" 
+                             class="card-image">
+                        <h3 class="card-title">
+                            Computación cuántica alcanza nuevo hito en corrección de errores
+                        </h3>
+                        <time class="card-date" datetime="2026-01-27">27 ene 2026</time>
+                    </a>
+                </article>
+
+                <article class="article-card">
+                    <a href="noticia.html" class="card-link">
+                        <img src="images/noticia-3.jpg" 
+                             alt="Realidad virtual en educación" 
+                             class="card-image">
+                        <h3 class="card-title">
+                            Realidad virtual transforma la educación universitaria en España
+                        </h3>
+                        <time class="card-date" datetime="2026-01-26">26 ene 2026</time>
+                    </a>
+                </article>
+
+                <article class="article-card">
+                    <a href="noticia.html" class="card-link">
+                        <img src="images/noticia-4.jpg" 
+                             alt="Energías renovables" 
+                             class="card-image">
+                        <h3 class="card-title">
+                            Paneles solares de nueva generación duplican su eficiencia
+                        </h3>
+                        <time class="card-date" datetime="2026-01-25">25 ene 2026</time>
+                    </a>
+                </article>
+
+                <article class="article-card">
+                    <a href="noticia.html" class="card-link">
+                        <img src="images/noticia-5.jpg" 
+                             alt="Ciberseguridad empresarial" 
+                             class="card-image">
+                        <h3 class="card-title">
+                            Nuevas amenazas de ciberseguridad preocupan a empresas tecnológicas
+                        </h3>
+                        <time class="card-date" datetime="2026-01-24">24 ene 2026</time>
+                    </a>
+                </article>
+
+                <article class="article-card">
+                    <a href="noticia.html" class="card-link">
+                        <img src="images/noticia-6.jpg" 
+                             alt="Blockchain en finanzas" 
+                             class="card-image">
+                        <h3 class="card-title">
+                            Blockchain revoluciona el sistema bancario tradicional europeo
+                        </h3>
+                        <time class="card-date" datetime="2026-01-23">23 ene 2026</time>
+                    </a>
+                </article>
+
+                <article class="article-card">
+                    <a href="noticia.html" class="card-link">
+                        <img src="images/noticia-7.jpg" 
+                             alt="Internet 6G" 
+                             class="card-image">
+                        <h3 class="card-title">
+                            Primeras pruebas de internet 6G prometen velocidades impensables
+                        </h3>
+                        <time class="card-date" datetime="2026-01-22">22 ene 2026</time>
+                    </a>
+                </article>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 TechNews. Todos los derechos reservados.</p>
+            <p>Proyecto académico - Diseño Web Responsivo</p>
+        </div>
+    </footer>
+
+</body>
+</html>
