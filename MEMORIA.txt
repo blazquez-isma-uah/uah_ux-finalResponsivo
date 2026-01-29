@@ -1,6 +1,6 @@
 ================================================================================
                     MEMORIA DEL PROYECTO
-         DISEÑO WEB RESPONSIVO - PORTAL DE NOTICIAS TECHNEWS
+         DISEÑO WEB RESPONSIVO - PORTAL DE NOTICIAS UX Final Project News
 ================================================================================
 
 Trabajo Final Unidad 2 - Diseño Web Responsivo

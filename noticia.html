@@ -4,46 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="La Inteligencia Artificial revoluciona el desarrollo de software moderno">
-    <title>IA revoluciona el desarrollo de software - TechNews</title>
+    <title>IA revoluciona el desarrollo de software - UX Final Project News</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <!-- Cabecera del sitio (igual que en index) -->
     <header class="site-header">
         <div class="container">
-            <!-- Logo / Home -->
-            <div class="logo">
-                <a href="index.html">
-                    <img src="images/logo.png" alt="TechNews - Inicio" class="logo-img">
-                </a>
+            <!-- Fila 1: Logo, Título, Búsqueda -->
+            <div class="header-top">
+                <!-- Logo / Home -->
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo.jpg" alt="UX Final Project News - Inicio" class="logo-img">
+                    </a>
+                </div>
+
+                <!-- Título principal del sitio -->
+                <h1 class="site-title">UX Final Project News</h1>
+
+                <!-- Formulario de búsqueda -->
+                <form class="search-form" role="search">
+                    <label for="search-input" class="visually-hidden">Buscar noticias</label>
+                    <input 
+                        type="search" 
+                        id="search-input" 
+                        class="search-input" 
+                        placeholder="Buscar noticias..."
+                        aria-label="Campo de búsqueda">
+                    <button type="submit" class="search-button" aria-label="Buscar">
+                        <span class="search-icon">🔍</span>
+                    </button>
+                </form>
             </div>
 
-            <!-- Título principal del sitio -->
-            <h1 class="site-title">TechNews</h1>
-
-            <!-- Menú de navegación -->
+            <!-- Fila 2: Menú de navegación -->
             <nav class="main-nav">
                 <ul class="nav-list">
-                    <li><a href="index.html#tecnologia">Tecnología</a></li>
-                    <li><a href="index.html#ciencia">Ciencia</a></li>
-                    <li><a href="index.html#innovacion">Innovación</a></li>
-                    <li><a href="index.html#gadgets">Gadgets</a></li>
+                    <li><a href="index.html#actualidad">Actualidad</a></li>
+                    <li><a href="index.html#software">Software</a></li>
+                    <li><a href="index.html#hardware">Hardware</a></li>
+                    <li><a href="index.html#tendencias">Tendencias</a></li>
                 </ul>
             </nav>
-
-            <!-- Formulario de búsqueda -->
-            <form class="search-form" role="search">
-                <label for="search-input" class="visually-hidden">Buscar noticias</label>
-                <input 
-                    type="search" 
-                    id="search-input" 
-                    class="search-input" 
-                    placeholder="Buscar noticias..."
-                    aria-label="Campo de búsqueda">
-                <button type="submit" class="search-button" aria-label="Buscar">
-                    <span class="search-icon">🔍</span>
-                </button>
-            </form>
         </div>
     </header>
 
@@ -61,9 +64,11 @@
                             La Inteligencia Artificial revoluciona el desarrollo de software moderno
                         </h2>
                         <div class="article-meta">
-                            <time class="publish-date" datetime="2026-01-28">28 de enero de 2026</time>
+                            <div>
+                                <span class="reading-time">Lectura: 5 min</span>
+                                <time class="publish-date" datetime="2026-01-28">28 de enero de 2026</time>
+                            </div>
                             <span class="article-category">Tecnología</span>
-                            <span class="reading-time">Lectura: 5 min</span>
                         </div>
                     </header>
 
@@ -72,9 +77,6 @@
                         <img src="images/noticia-principal.jpg" 
                              alt="Desarrollador trabajando con herramientas de IA" 
                              class="article-main-image">
-                        <figcaption class="image-caption">
-                            Un desarrollador utiliza asistentes de IA para optimizar su código
-                        </figcaption>
                     </figure>
 
                     <!-- Cuerpo del artículo -->
@@ -105,11 +107,11 @@
 
                         <!-- Segunda imagen en el artículo -->
                         <figure class="article-figure inline-figure">
-                            <img src="images/noticia-ai-code.jpg" 
-                                 alt="Interfaz de herramienta de IA generando código" 
+                            <img src="images/noticia-ai.jpg" 
+                                 alt="Herramientas de IA populares entre desarrolladores"
                                  class="article-inline-image">
                             <figcaption class="image-caption">
-                                Ejemplo de generación automática de código mediante IA
+                                Herramientas de IA populares entre desarrolladores de software
                             </figcaption>
                         </figure>
 
@@ -147,7 +149,7 @@
                     <!-- Información del autor -->
                     <footer class="article-footer">
                         <p class="author-info">
-                            <strong>Escrito por:</strong> Carlos Martínez, redactor de tecnología
+                            <strong>Escrito por:</strong> Ismael Blázquez, redactor de tecnología
                         </p>
                     </footer>
                 </article>
@@ -160,27 +162,32 @@
                         <ul class="related-list">
                             <li class="related-item">
                                 <a href="noticia.html" class="related-link">
-                                    <h4>Computación cuántica alcanza nuevo hito en corrección de errores</h4>
+                                    <h4>Microsoft integra Copilot Pro en todas las aplicaciones de Windows</h4>
                                 </a>
                             </li>
                             <li class="related-item">
                                 <a href="noticia.html" class="related-link">
-                                    <h4>Realidad virtual transforma la educación universitaria en España</h4>
+                                    <h4>NVIDIA RTX 5090 bate todos los récords de rendimiento gráfico</h4>
                                 </a>
                             </li>
                             <li class="related-item">
                                 <a href="noticia.html" class="related-link">
-                                    <h4>Nuevas amenazas de ciberseguridad preocupan a empresas tecnológicas</h4>
+                                    <h4>Meta lanza gafas de realidad aumentada accesibles para el público</h4>
                                 </a>
                             </li>
                             <li class="related-item">
                                 <a href="noticia.html" class="related-link">
-                                    <h4>Blockchain revoluciona el sistema bancario tradicional europeo</h4>
+                                    <h4>Python destrona a JavaScript como lenguaje más usado mundialmente</h4>
                                 </a>
                             </li>
                             <li class="related-item">
                                 <a href="noticia.html" class="related-link">
-                                    <h4>Primeras pruebas de internet 6G prometen velocidades impensables</h4>
+                                    <h4>Apple Mac Pro con chip M4 Ultra revoluciona estaciones profesionales</h4>
+                                </a>
+                            </li>
+                            <li class="related-item">
+                                <a href="noticia.html" class="related-link">
+                                    <h4>IBM anuncia primer ordenador cuántico comercial para empresas globales</h4>
                                 </a>
                             </li>
                         </ul>
@@ -195,8 +202,8 @@
     <!-- Pie de página -->
     <footer class="site-footer">
         <div class="container">
-            <p>&copy; 2026 TechNews. Todos los derechos reservados.</p>
-            <p>Proyecto académico - Diseño Web Responsivo</p>
+            <p>&copy; 2026 UX Final Project News. Todos los derechos reservados.</p>
+            <p>Proyecto Final - Diseño Web Responsivo</p>
         </div>
     </footer>
 

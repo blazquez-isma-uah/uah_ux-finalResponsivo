@@ -1,5 +1,5 @@
 ========================================
-  TECHNEWS - PROYECTO WEB RESPONSIVO
+  UX Final Project News - PROYECTO WEB RESPONSIVO
   Manual de Despliegue
 ========================================
 
@@ -22,10 +22,10 @@ proyecto-rwd/
 ├── css/
 │   └── styles.css         # Hoja de estilos responsiva
 ├── images/                # Imágenes del sitio (SVG placeholder)
-│   ├── logo.png
+│   ├── logo.jpg
 │   ├── noticia-principal.jpg
 │   ├── noticia-2.jpg a noticia-7.jpg
-│   └── noticia-ai-code.jpg
+│   └── noticia-ai.jpg
 └── README.txt             # Este archivo
 
 INSTRUCCIONES DE DESPLIEGUE

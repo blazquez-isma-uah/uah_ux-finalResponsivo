@@ -1,5 +1,5 @@
 /*
- * TechNews - Diseño Web Responsivo
+ * UX final project news - Diseño Web Responsivo
  * Aplicando los principios de la Unidad 2: RWD
  * - Grid flexible (porcentajes, em)
  * - Medios flexibles (max-width: 100%)
@@ -78,31 +78,37 @@ img {
 .site-header .container {
     display: flex;
     flex-direction: column;
+    gap: 1em;
+}
+
+/* Fila 1: Logo, Título, Búsqueda */
+.header-top {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 1em;
+    width: 100%; /* Asegurar que ocupe el 100% del contenedor */
 }
 
 /* Logo */
 .logo {
-    width: 100%;
     text-align: center;
 }
 
 .logo-img {
     width: 3.125em; /* 50px / 16px = 3.125em */
     height: auto;
-    margin: 0 auto;
 }
 
 /* Título del sitio */
 .site-title {
-    font-size: 1.75em; /* 28px móvil (más manejable) */
+    font-size: 1.75em; /* 28px / 16px = 1.75em */
     font-weight: 700;
     text-align: center;
     margin: 0;
 }
 
-/* Navegación principal */
+/* Navegación principal - Fila 2 */
 .main-nav {
     width: 100%;
 }
@@ -143,14 +149,14 @@ img {
 
 .search-input {
     flex: 1;
-    padding: 0.75em;
+    padding: 0.4em;
     border: none;
     border-radius: 0.25em 0 0 0.25em;
     font-size: 1em;
 }
 
 .search-button {
-    padding: 0.75em 1.25em;
+    padding: 0.75em;
     background-color: #4CAF50;
     color: #fff;
     border: none;
@@ -251,8 +257,6 @@ img {
 .card-image {
     width: 100%;
     height: auto;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
 }
 
 .card-title {
@@ -274,7 +278,7 @@ img {
    ======================================== */
 
 .article-page .container {
-    max-width: 56.25em; /* 900px / 16px = 56.25em */
+    max-width: 75em; /* 1200px / 16px = 75em */
 }
 
 .article-wrapper {
@@ -415,7 +419,7 @@ img {
 
 .related-link h4 {
     font-size: 1em;
-    line-height: 1.4;
+    line-height: 1.2;
     font-weight: 600;
 }
 
@@ -449,49 +453,49 @@ img {
         font-size: 2em; /* 32px en tablet */
     }
 
-    /* Cabecera: disponer elementos en fila */
-    .site-header .container {
+    /* Cabecera: Fila 1 - Logo, Título centrado, Búsqueda */
+    .header-top {
         flex-direction: row;
-        flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
+        width: 100%;
     }
 
     .logo {
-        width: auto;
-        order: 1;
+        flex: 0 0 auto;
     }
 
     .site-title {
-        order: 2;
         flex: 1;
-        text-align: left;
-        margin-left: 1em;
+        text-align: center;
+        margin: 0;
     }
 
     .search-form {
-        order: 3;
+        flex: 0 0 auto;
         width: auto;
         min-width: 15.625em; /* 250px */
     }
 
+    /* Navegación: Fila 2 - Menú extendido */
     .main-nav {
-        order: 4;
         width: 100%;
-        margin-top: 1em;
+        margin-top: 0.5em;
     }
 
     .nav-list {
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-around;
+        gap: 1em;
     }
 
     .nav-list li {
-        flex: 0 1 auto;
+        flex: 1;
     }
 
     .nav-list a {
-        padding: 0.5em 1em;
+        padding: 0.75em 1.5em;
+        text-align: center;
     }
 
     /* Grid de noticias: 2 columnas en tablet */

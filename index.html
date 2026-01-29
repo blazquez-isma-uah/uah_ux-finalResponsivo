@@ -3,47 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portal de noticias tecnológicas - TechNews">
-    <title>TechNews - Portal de Noticias Tecnológicas</title>
+    <meta name="description" content="Portal de noticias tecnológicas - UX Final Project News">
+    <title>UX Final Project News - Portal de Noticias Tecnológicas</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <!-- Cabecera del sitio -->
     <header class="site-header">
         <div class="container">
-            <!-- Logo / Home -->
-            <div class="logo">
-                <a href="index.html">
-                    <img src="images/logo.png" alt="TechNews - Inicio" class="logo-img">
-                </a>
+            <!-- Fila 1: Logo, Título, Búsqueda -->
+            <div class="header-top">
+                <!-- Logo / Home -->
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo.jpg" alt="UX Final Project News - Inicio" class="logo-img">
+                    </a>
+                </div>
+
+                <!-- Título principal del sitio -->
+                <h1 class="site-title">UX Final Project News</h1>
+
+                <!-- Formulario de búsqueda -->
+                <form class="search-form" role="search">
+                    <label for="search-input" class="visually-hidden">Buscar noticias</label>
+                    <input 
+                        type="search" 
+                        id="search-input" 
+                        class="search-input" 
+                        placeholder="Buscar noticias..."
+                        aria-label="Campo de búsqueda">
+                    <button type="submit" class="search-button" aria-label="Buscar">
+                        <span class="search-icon">🔍</span>
+                    </button>
+                </form>
             </div>
 
-            <!-- Título principal del sitio -->
-            <h1 class="site-title">TechNews</h1>
-
-            <!-- Menú de navegación -->
+            <!-- Fila 2: Menú de navegación -->
             <nav class="main-nav">
                 <ul class="nav-list">
-                    <li><a href="#tecnologia">Tecnología</a></li>
-                    <li><a href="#ciencia">Ciencia</a></li>
-                    <li><a href="#innovacion">Innovación</a></li>
-                    <li><a href="#gadgets">Gadgets</a></li>
+                    <li><a href="#actualidad">Actualidad</a></li>
+                    <li><a href="#software">Software</a></li>
+                    <li><a href="#hardware">Hardware</a></li>
+                    <li><a href="#tendencias">Tendencias</a></li>
                 </ul>
             </nav>
-
-            <!-- Formulario de búsqueda -->
-            <form class="search-form" role="search">
-                <label for="search-input" class="visually-hidden">Buscar noticias</label>
-                <input 
-                    type="search" 
-                    id="search-input" 
-                    class="search-input" 
-                    placeholder="Buscar noticias..."
-                    aria-label="Campo de búsqueda">
-                <button type="submit" class="search-button" aria-label="Buscar">
-                    <span class="search-icon">🔍</span>
-                </button>
-            </form>
         </div>
     </header>
 
@@ -80,10 +83,22 @@
                 <article class="article-card">
                     <a href="noticia.html" class="card-link">
                         <img src="images/noticia-2.jpg" 
-                             alt="Quantum computing avances" 
+                             alt="Microsoft copilot integrado en Windows" 
                              class="card-image">
                         <h3 class="card-title">
-                            Computación cuántica alcanza nuevo hito en corrección de errores
+                            Microsoft integra Copilot Pro en todas las aplicaciones de Windows
+                        </h3>
+                        <time class="card-date" datetime="2026-01-28">28 ene 2026</time>
+                    </a>
+                </article>
+
+                <article class="article-card">
+                    <a href="noticia.html" class="card-link">
+                        <img src="images/noticia-3.jpg" 
+                             alt="NVIDIA RTX 5090 bate récords" 
+                             class="card-image">
+                        <h3 class="card-title">
+                            NVIDIA RTX 5090 bate todos los récords de rendimiento gráfico
                         </h3>
                         <time class="card-date" datetime="2026-01-27">27 ene 2026</time>
                     </a>
@@ -91,11 +106,11 @@
 
                 <article class="article-card">
                     <a href="noticia.html" class="card-link">
-                        <img src="images/noticia-3.jpg" 
-                             alt="Realidad virtual en educación" 
+                        <img src="images/noticia-4.jpg" 
+                             alt="Meta presenta gafas AR" 
                              class="card-image">
                         <h3 class="card-title">
-                            Realidad virtual transforma la educación universitaria en España
+                            Meta lanza gafas de realidad aumentada accesibles para el público
                         </h3>
                         <time class="card-date" datetime="2026-01-26">26 ene 2026</time>
                     </a>
@@ -103,11 +118,11 @@
 
                 <article class="article-card">
                     <a href="noticia.html" class="card-link">
-                        <img src="images/noticia-4.jpg" 
-                             alt="Energías renovables" 
+                        <img src="images/noticia-5.jpg" 
+                             alt="Python supera a JavaScript" 
                              class="card-image">
                         <h3 class="card-title">
-                            Paneles solares de nueva generación duplican su eficiencia
+                            Python destrona a JavaScript como lenguaje más usado mundialmente
                         </h3>
                         <time class="card-date" datetime="2026-01-25">25 ene 2026</time>
                     </a>
@@ -115,11 +130,11 @@
 
                 <article class="article-card">
                     <a href="noticia.html" class="card-link">
-                        <img src="images/noticia-5.jpg" 
-                             alt="Ciberseguridad empresarial" 
+                        <img src="images/noticia-6.jpg" 
+                             alt="Apple Mac Pro M4" 
                              class="card-image">
                         <h3 class="card-title">
-                            Nuevas amenazas de ciberseguridad preocupan a empresas tecnológicas
+                            Apple Mac Pro con chip M4 Ultra revoluciona estaciones profesionales
                         </h3>
                         <time class="card-date" datetime="2026-01-24">24 ene 2026</time>
                     </a>
@@ -127,25 +142,13 @@
 
                 <article class="article-card">
                     <a href="noticia.html" class="card-link">
-                        <img src="images/noticia-6.jpg" 
-                             alt="Blockchain en finanzas" 
+                        <img src="images/noticia-7.jpg" 
+                             alt="Computación cuántica comercial" 
                              class="card-image">
                         <h3 class="card-title">
-                            Blockchain revoluciona el sistema bancario tradicional europeo
+                            IBM anuncia primer ordenador cuántico comercial para empresas globales
                         </h3>
                         <time class="card-date" datetime="2026-01-23">23 ene 2026</time>
-                    </a>
-                </article>
-
-                <article class="article-card">
-                    <a href="noticia.html" class="card-link">
-                        <img src="images/noticia-7.jpg" 
-                             alt="Internet 6G" 
-                             class="card-image">
-                        <h3 class="card-title">
-                            Primeras pruebas de internet 6G prometen velocidades impensables
-                        </h3>
-                        <time class="card-date" datetime="2026-01-22">22 ene 2026</time>
                     </a>
                 </article>
             </section>
@@ -156,8 +159,8 @@
     <!-- Pie de página -->
     <footer class="site-footer">
         <div class="container">
-            <p>&copy; 2026 TechNews. Todos los derechos reservados.</p>
-            <p>Proyecto académico - Diseño Web Responsivo</p>
+            <p>&copy; 2026 UX Final Project News. Todos los derechos reservados.</p>
+            <p>Proyecto Final - Diseño Web Responsivo</p>
         </div>
     </footer>
 
