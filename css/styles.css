@@ -1,15 +1,3 @@
-/*
- * UX final project news - Diseño Web Responsivo
- * Aplicando los principios de la Unidad 2: RWD
- * - Grid flexible (porcentajes, em)
- * - Medios flexibles (max-width: 100%)
- * - Media queries (min-width, Mobile First)
- */
-
-/* ========================================
-   RESET Y CONFIGURACIÓN BASE
-   ======================================== */
-
 * {
     margin: 0;
     padding: 0;
@@ -17,8 +5,7 @@
 }
 
 html {
-    /* Base: 16px = 100% (para usar em) */
-    font-size: 100%;
+    font-size: 100%; /* 16px */
 }
 
 body {
@@ -29,11 +16,6 @@ body {
     background-color: #f5f5f5;
 }
 
-/* ========================================
-   UTILIDADES
-   ======================================== */
-
-/* Ocultar visualmente pero mantener para lectores de pantalla */
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -45,29 +27,21 @@ body {
     border: 0;
 }
 
-/* Contenedor principal con max-width flexible */
 .container {
-    width: 90%; /* Flexible: objetivo/contexto */
-    max-width: 75em; /* 1200px / 16px = 75em */
+    width: 90%; /* 90% del ancho de la pantalla */
+    max-width: 75em; /* 1200px / 16px */
     margin: 0 auto;
     padding: 0 1em;
 }
 
-/* ========================================
-   IMÁGENES FLEXIBLES (Unidad 2 - Tema 3)
-   "img { max-width: 100%; }" - Regla fundamental
-   ======================================== */
-
+/* IMÁGENES FLEXIBLES */
 img {
     max-width: 100%;
     height: auto;
     display: block;
 }
 
-/* ========================================
-   CABECERA - MOBILE FIRST (BASE)
-   ======================================== */
-
+/* CABECERA - MOBILE FIRST (BASE) */
 .site-header {
     background-color: #1a1a1a;
     color: #fff;
@@ -76,47 +50,44 @@ img {
 }
 
 .site-header .container {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
+    display: flex; /* Flexbox para layout */
+    flex-direction: column; /* Disposición en columna para móvil */
+    gap: 1em; 
 }
 
 /* Fila 1: Logo, Título, Búsqueda */
 .header-top {
-    display: flex;
-    flex-direction: column;
+    display: flex; /* Flexbox para layout */
+    flex-direction: column; /* Disposición en columna para móvil */
     align-items: center;
     gap: 1em;
     width: 100%; /* Asegurar que ocupe el 100% del contenedor */
 }
 
-/* Logo */
 .logo {
     text-align: center;
 }
 
 .logo-img {
-    width: 3.125em; /* 50px / 16px = 3.125em */
+    width: 3.125em; /* 50px / 16px */
     height: auto;
 }
 
-/* Título del sitio */
 .site-title {
-    font-size: 1.75em; /* 28px / 16px = 1.75em */
+    font-size: 1.75em; /* 28px / 16px */
     font-weight: 700;
     text-align: center;
     margin: 0;
 }
 
-/* Navegación principal - Fila 2 */
 .main-nav {
-    width: 100%;
+    width: 100%; /* Asegurar que ocupe el 100% del contenedor */
 }
 
 .nav-list {
     list-style: none;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     gap: 0.5em;
 }
 
@@ -144,11 +115,11 @@ img {
 .search-form {
     display: flex;
     width: 100%;
-    max-width: 31.25em; /* 500px / 16px = 31.25em */
+    max-width: 31.25em; /* 500px / 16px */
 }
 
 .search-input {
-    flex: 1;
+    flex: 1; /* Ocupa todo el espacio disponible */
     padding: 0.4em;
     border: none;
     border-radius: 0.25em 0 0 0.25em;
@@ -156,7 +127,7 @@ img {
 }
 
 .search-button {
-    padding: 0.75em;
+    padding: 0.75em; /* 12px / 16px */
     background-color: #4CAF50;
     color: #fff;
     border: none;
@@ -174,10 +145,6 @@ img {
 .search-icon {
     font-size: 1.125em; /* 18px */
 }
-
-/* ========================================
-   CONTENIDO PRINCIPAL - MOBILE FIRST
-   ======================================== */
 
 .main-content {
     padding: 2em 0;
@@ -199,16 +166,17 @@ img {
 }
 
 .article-image {
-    width: 100%;
+    width: 100%; /* Imagen ocupa todo el ancho */
     height: auto;
 }
 
 .article-content {
+    width: 100%; /* Contenido ocupa todo el ancho */
     padding: 1.5em;
 }
 
 .article-title {
-    font-size: 1.5em; /* 24px / 16px = 1.5em */
+    font-size: 1.5em; /* 24px / 16px */
     margin-bottom: 0.5em;
     color: #1a1a1a;
     line-height: 1.3;
@@ -223,15 +191,15 @@ img {
 
 .article-date {
     display: inline-block;
-    font-size: 0.875em; /* 14px / 16px = 0.875em */
+    font-size: 0.875em; /* 14px / 16px */
     color: #888;
     font-style: italic;
 }
 
-/* Grid de noticias secundarias - Mobile: 1 columna */
+/* Grid de noticias secundarias */
 .secondary-articles {
     display: grid;
-    grid-template-columns: 1fr; /* 1 columna en móvil */
+    grid-template-columns: 1fr; /* 1 columna en dispositivo móvil */
     gap: 1.5em;
 }
 
@@ -255,12 +223,14 @@ img {
 }
 
 .card-image {
-    width: 100%;
+    width: 100%; /* Imagen ocupa todo el ancho */
     height: auto;
+    aspect-ratio: 16 / 9; /* Para que todas las imágenes tengan la misma proporción */
+    object-fit: cover; /* Recorta la imagen si es necesario */
 }
 
 .card-title {
-    font-size: 1.125em; /* 18px / 16px = 1.125em */
+    font-size: 1.125em; /* 18px / 16px */
     padding: 1em;
     color: #1a1a1a;
     line-height: 1.4;
@@ -269,21 +239,19 @@ img {
 .card-date {
     display: block;
     padding: 0 1em 1em 1em;
-    font-size: 0.875em;
+    font-size: 0.875em; /* 14px / 16px */
     color: #888;
 }
 
-/* ========================================
-   PÁGINA DE NOTICIA - MOBILE FIRST
-   ======================================== */
 
+/* PÁGINA DE NOTICIA */
 .article-page .container {
-    max-width: 75em; /* 1200px / 16px = 75em */
+    max-width: 75em; /* 1200px / 16px */
 }
 
 .article-wrapper {
-    display: flex;
-    flex-direction: column;
+    display: flex; /* Flexbox para layout */
+    flex-direction: column; /* Disposición en columna para móvil */
     gap: 2em;
 }
 
@@ -300,17 +268,17 @@ img {
 }
 
 .article-main-title {
-    font-size: 1.75em; /* 28px en móvil */
+    font-size: 1.75em; /* 28px / 16px */
     line-height: 1.3;
     margin-bottom: 0.5em;
     color: #1a1a1a;
 }
 
 .article-meta {
-    display: flex;
+    display: flex; /* Flexbox para layout */
     flex-wrap: wrap;
     gap: 1em;
-    font-size: 0.875em;
+    font-size: 0.875em; /* 14px / 16px */
     color: #666;
 }
 
@@ -328,13 +296,13 @@ img {
 
 .article-main-image,
 .article-inline-image {
-    width: 100%;
+    width: 100%; /* Imagen ocupa todo el ancho */   
     height: auto;
     border-radius: 0.5em;
 }
 
 .image-caption {
-    font-size: 0.875em;
+    font-size: 0.875em; /* 14px / 16px */
     color: #666;
     font-style: italic;
     margin-top: 0.5em;
@@ -343,7 +311,7 @@ img {
 
 /* Cuerpo del artículo */
 .article-body {
-    font-size: 1.0625em; /* 17px / 16px = 1.0625em */
+    font-size: 1.0625em; /* 17px / 16px */
     line-height: 1.7;
 }
 
@@ -352,13 +320,13 @@ img {
 }
 
 .lead-paragraph {
-    font-size: 1.125em; /* 18px */
+    font-size: 1.125em; /* 18px / 16px */
     font-weight: 500;
     color: #333;
 }
 
 .article-body h3 {
-    font-size: 1.375em; /* 22px */
+    font-size: 1.375em; /* 22px / 16px */
     margin-top: 1.5em;
     margin-bottom: 0.75em;
     color: #1a1a1a;
@@ -384,7 +352,7 @@ img {
 }
 
 .sidebar-title {
-    font-size: 1.25em;
+    font-size: 1.25em; /* 20px / 16px */
     margin-bottom: 1em;
     color: #1a1a1a;
 }
@@ -423,10 +391,8 @@ img {
     font-weight: 600;
 }
 
-/* ========================================
-   PIE DE PÁGINA
-   ======================================== */
 
+/* PIE DE PÁGINA */
 .site-footer {
     background-color: #1a1a1a;
     color: #fff;
@@ -437,60 +403,57 @@ img {
 
 .site-footer p {
     margin-bottom: 0.5em;
-    font-size: 0.875em;
+    font-size: 0.875em; /* 14px / 16px */
 }
 
-/* ========================================
-   MEDIA QUERY - TABLET (768px+)
-   Unidad 2: min-width (Mobile First)
-   Fórmula: 768px / 16px = 48em
-   ======================================== */
-
-@media screen and (min-width: 48em) {
+/* ======================================= */
+/* MEDIA QUERY - TABLET (768px+) */
+/* ======================================= */
+@media screen and (min-width: 768px) {
     
     /* Tipografía ligeramente mayor */
     .site-title {
-        font-size: 2em; /* 32px en tablet */
+        font-size: 2em; /* 32px / 16px */
     }
 
     /* Cabecera: Fila 1 - Logo, Título centrado, Búsqueda */
     .header-top {
-        flex-direction: row;
+        flex-direction: row; /* Disposición en fila para tablet */
         justify-content: space-between;
         align-items: center;
-        width: 100%;
+        width: 100%; /* Asegurar que ocupe el 100% del contenedor */
     }
 
     .logo {
-        flex: 0 0 auto;
+        flex: 0 0 auto; /* Tamaño fijo para el logo */
     }
 
     .site-title {
-        flex: 1;
+        flex: 1; /* Ocupa el espacio restante */
         text-align: center;
         margin: 0;
     }
 
     .search-form {
-        flex: 0 0 auto;
+        flex: 0 0 auto; /* Tamaño fijo para el formulario de búsqueda */
         width: auto;
-        min-width: 15.625em; /* 250px */
+        min-width: 15.625em; /* 250px / 16px */
     }
 
     /* Navegación: Fila 2 - Menú extendido */
     .main-nav {
-        width: 100%;
+        width: 100%; /* Asegurar que ocupe el 100% del contenedor */
         margin-top: 0.5em;
     }
 
     .nav-list {
-        flex-direction: row;
+        flex-direction: row; /* Disposición en fila para tablet */
         justify-content: space-around;
         gap: 1em;
     }
 
     .nav-list li {
-        flex: 1;
+        flex: 1; /* Cada ítem ocupa el mismo espacio */
     }
 
     .nav-list a {
@@ -498,60 +461,57 @@ img {
         text-align: center;
     }
 
-    /* Grid de noticias: 2 columnas en tablet */
-    /* Aplicando grid flexible con porcentajes implícitos en CSS Grid */
+    /* Grid de noticias */
     .secondary-articles {
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales */
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales para tablet */
         gap: 2em;
     }
 
-    /* Noticia destacada: layout horizontal */
+    /* Noticia destacada */
     .featured-article .article-link {
-        display: flex;
-        align-items: flex-start;
+        display: flex; /* Flexbox para layout */
+        align-items: flex-start; /* Alinear al inicio */
     }
 
     .featured-article .article-image {
         width: 50%; /* 50% del contenedor */
-        flex-shrink: 0;
+        flex-shrink: 0; /* Evitar que la imagen se reduzca */
     }
 
     .featured-article .article-content {
-        width: 50%;
+        width: 50%; /* 50% del contenedor */
         padding: 2em;
     }
 
-    /* Artículo completo: título mayor */
+    /* Artículo completo */
     .article-main-title {
-        font-size: 2em; /* 32px en tablet */
+        font-size: 2em; /* 32px / 16px */
     }
 
 }
 
-/* ========================================
-   MEDIA QUERY - DESKTOP (1024px+)
-   Fórmula: 1024px / 16px = 64em
-   ======================================== */
 
-@media screen and (min-width: 64em) {
+/* ======================================= */
+/* MEDIA QUERY - DESKTOP (1024px+) */
+/* ======================================= */
+@media screen and (min-width: 1024px) {
 
-    /* Tipografía desktop */
     .site-title {
-        font-size: 2.25em; /* 36px */
+        font-size: 2.25em; /* 36px / 16px */
     }
 
     .article-title {
-        font-size: 1.75em; /* 28px */
+        font-size: 1.75em; /* 28px / 16px */
     }
 
-    /* Grid de noticias: 3 columnas en desktop */
+    /* Grid de noticias*/
     .secondary-articles {
-        grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales para desktop */
     }
 
-    /* Noticia destacada: imagen más grande */
+    /* Noticia destacada */
     .featured-article .article-image {
-        width: 62.5%; /* 5/8 = 62.5% (grid flexible) */
+        width: 62.5%; /* 5/8 = 62.5% */
     }
 
     .featured-article .article-content {
@@ -560,7 +520,7 @@ img {
 
     /* Página de artículo: layout con sidebar */
     .article-wrapper {
-        flex-direction: row;
+        flex-direction: row; /* Disposición en fila para desktop */
         gap: 2.5em;
     }
 
@@ -571,37 +531,36 @@ img {
 
     .related-sidebar {
         flex: 0 1 30%; /* 30% del espacio */
-        align-self: flex-start;
-        position: sticky;
+        align-self: flex-start; /* Alinear al inicio del contenedor */
+        position: sticky; /* Sidebar fijo al hacer scroll */
         top: 2em;
     }
 
     .article-main-title {
-        font-size: 2.5em; /* 40px en desktop */
+        font-size: 2.5em; /* 40px / 16px */ 
     }
 
-    /* Figura inline: float para texto alrededor */
+    /* Figura inline */
     .inline-figure {
-        float: right;
+        float: right; /* Flotar a la derecha */
         width: 45%; /* 45% del contenedor */
         margin: 0 0 1em 2em;
     }
 
 }
 
-/* ========================================
-   MEDIA QUERY - PANTALLAS GRANDES (1400px+)
-   Fórmula: 1400px / 16px = 87.5em
-   ======================================== */
 
-@media screen and (min-width: 87.5em) {
+/* ======================================= */
+/* MEDIA QUERY - PANTALLAS GRANDES (1400px+) */
+/* ======================================= */
+@media screen and (min-width: 1400px) {
     
     .container {
         max-width: 82.5em; /* 1320px / 16px */
     }
 
     .site-title {
-        font-size: 2.5em; /* 40px */
+        font-size: 2.5em; /* 40px / 16px */
     }
 
 }
