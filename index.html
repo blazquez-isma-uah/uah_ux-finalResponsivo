@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <title>UX Final Project News - Portal de Noticias Tecnológicas</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
     <!-- Cabecera del sitio -->
     <header class="site-header">
@@ -26,11 +28,7 @@
                 <!-- Formulario de búsqueda -->
                 <form class="search-form" role="search">
                     <label for="search-input" class="visually-hidden">Buscar noticias</label>
-                    <input 
-                        type="search" 
-                        id="search-input" 
-                        class="search-input" 
-                        placeholder="Buscar noticias..."
+                    <input type="search" id="search-input" class="search-input" placeholder="Buscar noticias..."
                         aria-label="Campo de búsqueda">
                     <button type="submit" class="search-button" aria-label="Buscar">
                         <span class="search-icon">🔍</span>
@@ -53,38 +51,95 @@
     <!-- Contenido principal -->
     <main class="main-content">
         <div class="container">
-            
-            <!-- Noticia Principal -->
-            <article class="featured-article">
-                <a href="noticia.html" class="article-link">
-                    <img src="images/noticia-principal.jpg" 
-                         alt="Inteligencia Artificial revoluciona el desarrollo de software" 
-                         class="article-image">
-                    
-                    <div class="article-content">
-                        <h2 class="article-title">
-                            La Inteligencia Artificial revoluciona el desarrollo de software moderno
-                        </h2>
-                        <p class="article-excerpt">
-                            Las nuevas herramientas de IA están transformando la forma en que los desarrolladores 
-                            escriben código. Asistentes inteligentes, generación automática y análisis predictivo 
-                            están mejorando la productividad en un 40% según estudios recientes de la industria 
-                            tecnológica mundial.
-                        </p>
-                        <time class="article-date" datetime="2026-01-28">28 de enero de 2026</time>
+
+            <!-- Video Destacado -->
+            <section class="featured-video-section" aria-labelledby="video-heading">
+                <h2 id="video-heading" class="section-title visually-hidden">Video destacado</h2>
+                <article class="video-article">
+                    <div class="video-wrapper">
+                        <!-- Video HTML5 
+                            controls: muestra los controles de reproducción 
+                            preload="metadata": carga solo los metadatos inicialmente para optimizar el rendimiento
+                            poster: imagen que se muestra antes de reproducir el video
+                        -->
+                        <video class="featured-video" id="featured-video" width="100%" height="auto" controls
+                            preload="metadata" poster="images/video-poster.jpg"
+                            aria-label="Video sobre Inteligencia Artificial y Robotica">
+                            <!-- Fuente del video principal en MP4 -->
+                            <source src="videos/noticia-destacada.mp4" type="video/mp4">
+
+                            <!-- Compatibilidad para navegadores antiguos: mensaje y enlace de descarga -->
+                            <div class="video-fallback">
+                                <img src="images/video-poster.jpg" alt="obótica e Inteligencia Artificial"
+                                    class="fallback-image">
+                                <p class="fallback-message">
+                                    Tu navegador no soporta la reproducción de video HTML5.
+                                    <br>
+                                    <a href="videos/noticia-destacada.mp4" download class="fallback-link">Descargar
+                                        video</a>
+                                </p>
+                            </div>
+                        </video>
+
+                        <!-- Indicador visual de que es un video -->
+                        <span class="video-badge" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                                <path d="M8 5v14l11-7z" />
+                            </svg>
+                            Video
+                        </span>
                     </div>
-                </a>
-            </article>
+
+                    <div class="article-content">
+                        <a href="noticia.html" class="article-link">
+                            <h2 class="article-title">
+                                El futuro de la robótica e inteligencia artificial en 2026
+                            </h2>
+                            <p class="article-excerpt">
+                                Un análisis profundo sobre cómo la robótica y la inteligencia artificial están
+                                transformando industrias clave como la manufactura, la salud y el transporte.
+                                Expertos predicen que para 2030, más del 50% de las tareas rutinarias serán
+                                automatizadas,
+                                liberando a los humanos para roles más creativos y estratégicos.
+                            </p>
+                            <time class="article-date" datetime="2026-01-28">28 de enero de 2026</time>
+
+                        </a>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Noticia Principal -->
+            <section class="featured-news-section" aria-labelledby="news-heading">
+                <h2 id="news-heading" class="section-title visually-hidden">Noticia destacada</h2>
+                <article class="featured-article">
+                    <a href="noticia.html" class="article-link">
+                        <img src="images/noticia-principal.jpg"
+                            alt="Inteligencia Artificial revoluciona el desarrollo de software" class="article-image">
+
+                        <div class="article-content">
+                            <h2 class="article-title">
+                                La Inteligencia Artificial revoluciona el desarrollo de software moderno
+                            </h2>
+                            <p class="article-excerpt">
+                                Las nuevas herramientas de IA están transformando la forma en que los desarrolladores
+                                escriben código. Asistentes inteligentes, generación automática y análisis predictivo
+                                están mejorando la productividad en un 40% según estudios recientes de la industria
+                                tecnológica mundial.
+                            </p>
+                            <time class="article-date" datetime="2026-01-28">28 de enero de 2026</time>
+                        </div>
+                    </a>
+                </article>
+            </section>
 
             <!-- Grid de noticias secundarias -->
             <section class="secondary-articles">
                 <h2 class="section-title visually-hidden">Más noticias</h2>
-                
+
                 <article class="article-card">
                     <a href="noticia.html" class="card-link">
-                        <img src="images/noticia-2.jpg" 
-                             alt="Microsoft copilot integrado en Windows" 
-                             class="card-image">
+                        <img src="images/noticia-2.jpg" alt="Microsoft copilot integrado en Windows" class="card-image">
                         <h3 class="card-title">
                             Microsoft integra Copilot Pro en todas las aplicaciones de Windows
                         </h3>
@@ -94,9 +149,7 @@
 
                 <article class="article-card">
                     <a href="noticia.html" class="card-link">
-                        <img src="images/noticia-3.jpg" 
-                             alt="NVIDIA RTX 5090 bate récords" 
-                             class="card-image">
+                        <img src="images/noticia-3.jpg" alt="NVIDIA RTX 5090 bate récords" class="card-image">
                         <h3 class="card-title">
                             NVIDIA RTX 5090 bate todos los récords de rendimiento gráfico
                         </h3>
@@ -106,9 +159,7 @@
 
                 <article class="article-card">
                     <a href="noticia.html" class="card-link">
-                        <img src="images/noticia-4.jpg" 
-                             alt="Meta presenta gafas AR" 
-                             class="card-image">
+                        <img src="images/noticia-4.jpg" alt="Meta presenta gafas AR" class="card-image">
                         <h3 class="card-title">
                             Meta lanza gafas de realidad aumentada accesibles para el público
                         </h3>
@@ -118,9 +169,7 @@
 
                 <article class="article-card">
                     <a href="noticia.html" class="card-link">
-                        <img src="images/noticia-5.jpg" 
-                             alt="Python supera a JavaScript" 
-                             class="card-image">
+                        <img src="images/noticia-5.jpg" alt="Python supera a JavaScript" class="card-image">
                         <h3 class="card-title">
                             Python destrona a JavaScript como lenguaje más usado mundialmente
                         </h3>
@@ -130,9 +179,7 @@
 
                 <article class="article-card">
                     <a href="noticia.html" class="card-link">
-                        <img src="images/noticia-6.jpg" 
-                             alt="Apple Mac Pro M4" 
-                             class="card-image">
+                        <img src="images/noticia-6.jpg" alt="Apple Mac Pro M4" class="card-image">
                         <h3 class="card-title">
                             Apple Mac Pro con chip M4 Ultra revoluciona estaciones profesionales
                         </h3>
@@ -142,9 +189,7 @@
 
                 <article class="article-card">
                     <a href="noticia.html" class="card-link">
-                        <img src="images/noticia-7.jpg" 
-                             alt="Computación cuántica comercial" 
-                             class="card-image">
+                        <img src="images/noticia-7.jpg" alt="Computación cuántica comercial" class="card-image">
                         <h3 class="card-title">
                             IBM anuncia primer ordenador cuántico comercial para empresas globales
                         </h3>
@@ -164,5 +209,8 @@
         </div>
     </footer>
 
+    <!-- JavaScript para fallback de video -->
+    <script src="js/video-fallback.js"></script>
 </body>
+
 </html>
